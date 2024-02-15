@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Consumo de Tecido</title>
+    <title>Calculadora de Consumo de Fio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,6 +18,14 @@
             <input type="number" id="gramatura" step="0.001" required>
             <label for="tara">Tara (g):</label>
             <input type="number" id="tara" step="0.001" required>
+            <label for="co">Porcentagem de Algodão (%):</label>
+            <input type="number" id="co" step="0.001" required>
+            <label for="pes">Porcentagem de Poliéster (%):</label>
+            <input type="number" id="pes" step="0.001" required>
+            <label for="pue">Porcentagem de Poliuretano (%):</label>
+            <input type="number" id="pue" step="0.001" required>
+            <label for="cv">Porcentagem de Viscose (%):</label>
+            <input type="number" id="cv" step="0.001" required>
             <button type="submit">Calcular</button>
         </form>
         <div id="resultado"></div>
