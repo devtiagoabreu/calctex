@@ -37,7 +37,7 @@ document.getElementById('form').addEventListener('submit', function(e) {
       }
 
       if (percentual != 0) {        
-        resultadoHTML += `<p>Consumo de fio (${tipo}): ${consumoFioPesoCalculado.toFixed(2)} kg</p>`;
+        resultadoHTML += `<p>Consumo de fio de (${tipo}): ${consumoFioPesoCalculado.toFixed(2)} kg</p>`;
       }
             
     });
