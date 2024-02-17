@@ -20,28 +20,46 @@ document.getElementById('form').addEventListener('submit', function(e) {
 
   let resultadoHTML = '';
 
+  let count = 0;
+
   if (metros > 0) {
     
     Object.entries(tipos_fio).forEach(([tipo, percentual]) => {
 
+      count = count + 1;
+
       const gramaturaLinear = gramatura * largura;
       const pesoLiquidoCalculado = metros * gramaturaLinear;
       const consumoFioPesoCalculado = pesoLiquidoCalculado * percentual;
-        
-      resultadoHTML += `<p>Peso Líquido (${tipo}): ${pesoLiquidoCalculado.toFixed(2)} kg</p>`;
-      resultadoHTML += `<p>Consumo de trama (${tipo}): ${consumoFioPesoCalculado.toFixed(2)} kg</p>`;
-        
+      
+      if (count == 1) {
+        resultadoHTML += `<p>Peso Líquido do tecido : ${pesoLiquidoCalculado.toFixed(2)} kg</p>`;
+      }
+
+      if (percentual != 0) {        
+        resultadoHTML += `<p>Consumo de fio (${tipo}): ${consumoFioPesoCalculado.toFixed(2)} kg</p>`;
+      }
+            
     });
   }else {
+    Object.entries(tipos_fio).forEach(([tipo, percentual]) => {
 
-    const pesoLiquidoReal = peso - tara;
-    const gramaturaLinear = gramatura * largura;
-    const metrosCalculados = pesoLiquidoReal / gramaturaLinear; 
-    const consumoFioPesoReal = pesoLiquidoReal * percentual;
+      count = count + 1;
 
-    resultadoHTML += `<p>Metros (${tipo}): ${metrosCalculados.toFixed(2)} m</p>`;
-    resultadoHTML += `<p>Consumo de fio (${tipo}): ${consumoFioPesoReal.toFixed(2)} kg</p>`;
-    
+      const pesoLiquidoReal = peso - tara;
+      const gramaturaLinear = gramatura * largura;
+      const metrosCalculados = pesoLiquidoReal / gramaturaLinear; 
+      const consumoFioPesoReal = pesoLiquidoReal * percentual;
+
+      if (count == 1) {
+        resultadoHTML += `<p>Metros de tecido : ${metrosCalculados.toFixed(2)} m</p>`;
+      }
+
+      if (percentual != 0) {       
+        resultadoHTML += `<p>Consumo de fio de (${tipo}): ${consumoFioPesoReal.toFixed(2)} kg</p>`;
+      }
+
+    });
   }
 
   document.getElementById('resultado').innerHTML = resultadoHTML;
