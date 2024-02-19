@@ -33,12 +33,12 @@ document.getElementById('form').addEventListener('submit', function(e) {
       const consumoFioPesoCalculado = pesoLiquidoCalculado * percentual;
       
       if (count == 1) {
-        resultadoHTML += `<p>Peso Líquido do tecido : ${pesoLiquidoCalculado.toFixed(4)} kg</p>`;
-        resultadoHTML += `<p>Gramatura Linear : ${gramaturaLinear.toFixed(4)} kg</p>`;
+        resultadoHTML += `<p>Peso Líquido do tecido : ${pesoLiquidoCalculado.toFixed(3)} kg</p>`;
+        resultadoHTML += `<p>Gramatura Linear : ${gramaturaLinear.toFixed(3)} kg</p>`;
       }
 
       if (percentual != 0) {        
-        resultadoHTML += `<p>Consumo de fio de (${tipo}): ${consumoFioPesoCalculado.toFixed(4)} kg</p>`;
+        resultadoHTML += `<p>Consumo de fio de (${tipo}): ${consumoFioPesoCalculado.toFixed(3)} kg</p>`;
       }
             
     });
@@ -53,12 +53,12 @@ document.getElementById('form').addEventListener('submit', function(e) {
       const consumoFioPesoReal = pesoLiquidoReal * percentual;
 
       if (count == 1) {
-        resultadoHTML += `<p>Metros de tecido : ${metrosCalculados.toFixed(4)} m</p>`;
-        resultadoHTML += `<p>Gramatura Linear : ${gramaturaLinear.toFixed(4)} kg</p>`;
+        resultadoHTML += `<p>Metros de tecido : ${metrosCalculados.toFixed(3)} m</p>`;
+        resultadoHTML += `<p>Gramatura Linear : ${gramaturaLinear.toFixed(3)} kg</p>`;
       }
 
       if (percentual != 0) {       
-        resultadoHTML += `<p>Consumo de fio de (${tipo}): ${consumoFioPesoReal.toFixed(4)} kg</p>`;
+        resultadoHTML += `<p>Consumo de fio de (${tipo}): ${consumoFioPesoReal.toFixed(3)} kg</p>`;
       }
 
     });
