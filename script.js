@@ -31,6 +31,8 @@ document.getElementById('form').addEventListener('submit', function(e) {
       const gramaturaLinear = gramatura * largura;
       const pesoLiquidoCalculado = metros * gramaturaLinear;
       const consumoFioPesoCalculado = pesoLiquidoCalculado * percentual;
+      const gramaturaFio = gramatura * percentual
+      
       
       if (count == 1) {
         resultadoHTML += `<p>Peso Líquido do tecido : ${pesoLiquidoCalculado.toFixed(3)} kg</p>`;
@@ -39,6 +41,7 @@ document.getElementById('form').addEventListener('submit', function(e) {
 
       if (percentual != 0) {        
         resultadoHTML += `<p>Consumo de fio de (${tipo}): ${consumoFioPesoCalculado.toFixed(3)} kg</p>`;
+        resultadoHTML += `<p>Gramatura M2 de fio de (${tipo}): ${gramaturaFio.toFixed(3)} kg</p>`;
       }
             
     });
@@ -51,6 +54,7 @@ document.getElementById('form').addEventListener('submit', function(e) {
       const gramaturaLinear = gramatura * largura;
       const metrosCalculados = pesoLiquidoReal / gramaturaLinear; 
       const consumoFioPesoReal = pesoLiquidoReal * percentual;
+      const gramaturaFio = gramatura * percentual
 
       if (count == 1) {
         resultadoHTML += `<p>Metros de tecido : ${metrosCalculados.toFixed(3)} m</p>`;
@@ -59,6 +63,7 @@ document.getElementById('form').addEventListener('submit', function(e) {
 
       if (percentual != 0) {       
         resultadoHTML += `<p>Consumo de fio de (${tipo}): ${consumoFioPesoReal.toFixed(3)} kg</p>`;
+        resultadoHTML += `<p>Gramatura M2 de fio de (${tipo}): ${gramaturaFio.toFixed(3)} kg</p>`;
       }
 
     });
