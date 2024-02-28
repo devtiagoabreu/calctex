@@ -31,8 +31,8 @@ document.getElementById('form').addEventListener('submit', function(e) {
       const gramaturaLinear = gramatura * largura;
       const pesoLiquidoCalculado = metros * gramaturaLinear;
       const consumoFioPesoCalculado = pesoLiquidoCalculado * percentual;
-      const gramaturaFioM2 = gramatura * percentual
-      const gramaturaFioLinear = gramaturaLinear * percentual
+      const gramaturaFioM2 = gramatura * percentual;
+      const gramaturaFioLinear = gramaturaLinear * percentual;
       
       if (count == 1) {
         resultadoHTML += `<p>Peso Líquido do tecido : ${pesoLiquidoCalculado.toFixed(3)} kg</p>`;
@@ -55,8 +55,8 @@ document.getElementById('form').addEventListener('submit', function(e) {
       const gramaturaLinear = gramatura * largura;
       const metrosCalculados = pesoLiquidoReal / gramaturaLinear; 
       const consumoFioPesoReal = pesoLiquidoReal * percentual;
-      const gramaturaFioM2 = gramatura * percentual
-      const gramaturaFioLinear = gramaturaLinear * percentual
+      const gramaturaFioM2 = gramatura * percentual;
+      const gramaturaFioLinear = gramaturaLinear * percentual;
 
       if (count == 1) {
         resultadoHTML += `<p>Metros de tecido : ${metrosCalculados.toFixed(3)} m</p>`;
